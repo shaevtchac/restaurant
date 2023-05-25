@@ -291,7 +291,7 @@
           class="min-w-[250px] max-w-[300px] flex-1"
           data-animation="fade-from-left"
         >
-          <img src="img/1-1.png" alt="nice meal" class="mx-auto" />
+          <img src="img/1-1.png?as=webp" alt="nice meal" class="mx-auto" />
           <h3 class="mb-1 mt-3 font-grandhotel text-[2em]">Title Here</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
@@ -301,7 +301,7 @@
           data-duration="1s"
           data-delay="1s"
         >
-          <img src="img/1-2.png" alt="nice meal" class="mx-auto" />
+          <img src="img/1-2.png?as=webp" alt="nice meal" class="mx-auto" />
           <h3 class="mb-1 mt-3 font-grandhotel text-[2em]">Title Here</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam?
@@ -311,7 +311,7 @@
           class="min-w-[250px] max-w-[300px] flex-1"
           data-animation="fade-from-right"
         >
-          <img src="img/1-3.png" alt="nice meal" class="mx-auto" />
+          <img src="img/1-3.png?as=webp" alt="nice meal" class="mx-auto" />
           <h3 class="mb-1 mt-3 font-grandhotel text-[2em]">Title Here</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
@@ -326,7 +326,15 @@
           class="relative z-10 hidden aspect-square w-3/4 shrink-0 overflow-hidden rounded-full sm:block sm:w-[90%]"
         >
           <img
-            src="img/hero.png"
+            src="img/hero.png?as=webp"
+            srcset="
+              img/hero.png?as=webp                      603w,
+              img/hero.png?as=webp&width=530&height=800 530w,
+              img/hero.png?as=webp&width=400&height=768 400w,
+              img/hero.png?as=webp&width=250&height=768 250w,
+              img/hero.png?as=webp&width=130&height=768 130w
+            "
+            sizes="30vw"
             alt="nice meal"
             class="rotate-180"
             data-animation="fade-from-left"
@@ -456,7 +464,13 @@
           <button class="btn-primary">ORDER NOW</button>
         </div>
         <img
-          src="img/3-1.png"
+          srcset="
+            img/3-1.png?as=webp           465w,
+            img/3-1.png?as=webp&width=370 370w,
+            img/3-1.png?as=webp&width=250 250w
+          "
+          sizes="33vw"
+          src="img/3-1.png?as=webp"
           alt="lovely meal"
           class="hidden sm:block"
           data-animation="fade-from-right"
@@ -467,7 +481,7 @@
     <!-- ________________________________________________________________ cite ________________________________________________________________ -->
 
     <section
-      class="mt-20 bg-[url(img/4-1.png)] bg-cover bg-center bg-no-repeat p-[18%] text-center sm:mt-40"
+      class="mt-20 bg-[url(img/4-1.png?as=webp&width=530&height=410)] bg-cover bg-center bg-no-repeat p-[18%] text-center sm:mt-40 sm:bg-[url(img/4-1.png?as=webp&width=700&height=450)] md:bg-[url(img/4-1.png?as=webp&width=900&height=450)] lg:bg-[url(img/4-1.png?as=webp&width=1280)] xl:bg-[url(img/4-1.png?as=webp)]"
     >
       <p
         class="mx-auto max-w-prose"
