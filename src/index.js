@@ -46,16 +46,14 @@ const animationObserver = new IntersectionObserver((entries) => {
     const {
       animation,
       duration = '500ms',
-      'timing-function': timingFunction = 'ease-in',
-      delay = '0ms',
-      'iteration-count': iterationCount = '1',
+      timing = 'ease-in',
+      delay = '500ms',
+      iteration = '1',
       direction = 'normal',
-      'fill-mode': fillMode = 'backwards',
+      fill = 'backwards',
     } = entry.target.dataset;
     if (entry.isIntersecting) {
-      entry.target.style.animation = `${animation} ${duration} ${timingFunction} ${delay} ${iterationCount} ${direction} ${fillMode}`;
-    } else {
-      entry.target.style.animation = 'none';
+      entry.target.style.animation = `${animation} ${duration} ${timing} ${delay} ${iteration} ${direction} ${fill}`;
     }
   });
 });
@@ -63,3 +61,4 @@ const animationObserver = new IntersectionObserver((entries) => {
 animatedElements.forEach((element) => {
   animationObserver.observe(element);
 });
+

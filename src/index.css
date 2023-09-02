@@ -3,6 +3,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --num1: 123;
+  --num2: 100;
+  --num3: 300;
+  --num4: 30;
+}
+
+@property --num1 {
+  syntax: '<integer>';
+  initial-value: 123;
+  inherits: false;
+}
+@property --num2 {
+  syntax: '<integer>';
+  initial-value: 100;
+  inherits: false;
+}
+@property --num3 {
+  syntax: '<integer>';
+  initial-value: 300;
+  inherits: false;
+}
+@property --num4 {
+  syntax: '<integer>';
+  initial-value: 30;
+  inherits: false;
+}
+
 @layer base {
   body {
     font-size: 1rem;
@@ -136,6 +164,40 @@ nav.reduced li {
 }
 
 /* _____________________________________________________ animations ________________________________________________ */
+
+/* data-animation="num1" data-duration="3s" data-timing="cubic-bezier(0,0,0,1)" for best results class="before:[content:counter(num1)] [counter-reset:num1_var(--num1)]"*/
+@keyframes num1 {
+  from {
+    --num1: 0;
+  }
+  to {
+    --num1: 123;
+  }
+}
+@keyframes num2 {
+  from {
+    --num2: 0;
+  }
+  to {
+    --num2: 100;
+  }
+}
+@keyframes num3 {
+  from {
+    --num3: 0;
+  }
+  to {
+    --num3: 300;
+  }
+}
+@keyframes num4 {
+  from {
+    --num4: 0;
+  }
+  to {
+    --num4: 30;
+  }
+}
 
 @keyframes fade-from-left {
   from {
